@@ -12,7 +12,7 @@ describe("Employee Class", () => {
         it("Sets the value of the properties when created", () => {
             const name = "Riley";
             const id = 1;
-            const email = "rileylum@adam.com.au"
+            const email = "rileylum@adam.com.au";
 
             const employee = new Employee(name, id, email);
 
@@ -25,7 +25,7 @@ describe("Employee Class", () => {
         it("Returns the name value when getName() is called", () => {
             const name = "Riley";
             const id = 1;
-            const email = "rileylum@adam.com.au"
+            const email = "rileylum@adam.com.au";
 
             const employee = new Employee(name, id, email);
 
@@ -36,7 +36,7 @@ describe("Employee Class", () => {
         it("Returns the id value when getId() is called", () => {
             const name = "Riley";
             const id = 1;
-            const email = "rileylum@adam.com.au"
+            const email = "rileylum@adam.com.au";
 
             const employee = new Employee(name, id, email);
 
@@ -47,7 +47,7 @@ describe("Employee Class", () => {
         it("Returns the email value when getEmail() is called", () => {
             const name = "Riley";
             const id = 1;
-            const email = "rileylum@adam.com.au"
+            const email = "rileylum@adam.com.au";
 
             const employee = new Employee(name, id, email);
 
