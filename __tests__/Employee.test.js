@@ -55,5 +55,12 @@ describe("Employee Class", () => {
 
             expect(employeeEmail).toEqual(email);
         })
+        it("Returns 'Employee' when getRole() is called", () => {
+            const employee = new Employee();
+
+            const employeeRole = employee.getRole();
+
+            expect(employeeRole).toEqual('Employee');
+        })
     })
 })
