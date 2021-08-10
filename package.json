@@ -1,0 +1,27 @@
+{
+  "name": "team-profile-tracker",
+  "version": "1.0.0",
+  "description": "CLI Application to generate a team profile tracker",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rileylum/team-profile-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rileylum/team-profile-tracker/issues"
+  },
+  "homepage": "https://github.com/rileylum/team-profile-tracker#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2",
+    "jest": "^27.0.6"
+  }
+}
