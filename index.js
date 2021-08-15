@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
+const generateHTML = require('./src/htmlHelper');
 
 const getManagerQuestions = () => {
     return Promise.resolve([
@@ -115,6 +116,7 @@ async function init() {
     } while (menuAnswer.choice != 'Finish Building Team')
 
     console.log(teamMembers);
+    console.log(generateHTML(teamMembers));
 }
 
 init();
