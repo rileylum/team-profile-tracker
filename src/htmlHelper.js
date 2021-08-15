@@ -2,7 +2,7 @@ const Engineer = require('../lib/Engineer');
 const Intern = require('../lib/Intern');
 const Manager = require('../lib/Manager');
 
-function generateHTML(team) {
+async function generateHTML(team) {
     let teamMembersHTML = "";
     team.forEach(member => {
         console.log(member);
@@ -63,11 +63,10 @@ function managerHTML(member) {
         </div>
             <ul class="list-group list-group-flush m-3 border border-secondary">
                 <li class="list-group-item">ID: ${member.id}</li>
-                <li class="list-group-item">Email: <a href="mailto:${member.email}>${member.email}</a></li>
+                <li class="list-group-item">Email: <a href="mailto:${member.email}">${member.email}</a></li>
                 <li class="list-group-item">Office Number: ${member.officeNumber}</li>
             </ul>
         </div>
-    </div>
     `
 }
 
@@ -80,11 +79,10 @@ function engineerHTML(member) {
         </div>
             <ul class="list-group list-group-flush m-3 border border-secondary">
                 <li class="list-group-item">ID: ${member.id}</li>
-                <li class="list-group-item">Email: <a href="mailto:${member.email}>${member.email}</a></li>
+                <li class="list-group-item">Email: <a href="mailto:${member.email}">${member.email}</a></li>
                 <li class="list-group-item">GitHub: <a href="${member.github}" target="_blank">${member.github}</a></li>
             </ul>
         </div>
-    </div>
     `
 }
 
@@ -97,11 +95,10 @@ function internHTML(member) {
         </div>
             <ul class="list-group list-group-flush m-3 border border-secondary">
                 <li class="list-group-item">ID: ${member.id}</li>
-                <li class="list-group-item">Email: <a href="mailto:${member.email}>${member.email}</a></li>
+                <li class="list-group-item">Email: <a href="mailto:${member.email}">${member.email}</a></li>
                 <li class="list-group-item">School: ${member.school}</li>
             </ul>
         </div>
-    </div>
     `
 }
 
