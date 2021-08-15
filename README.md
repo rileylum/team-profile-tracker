@@ -33,7 +33,7 @@
 
   Follow the command prompts. An index.html file will be created in the dist/ folder
 
-  ![Animation showing the usage of the project from a command line](./imgs/DemoGIF.gif)
+  ![Animation showing the usage of the project from a command line](./imgs/demoGIF.gif)
 
   ![Image showing the finished HTML generated from using the app](./imgs/screengrab.png)
 
