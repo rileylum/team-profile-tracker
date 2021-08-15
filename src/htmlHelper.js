@@ -1,11 +1,12 @@
+// add employee classes
 const Engineer = require('../lib/Engineer');
 const Intern = require('../lib/Intern');
 const Manager = require('../lib/Manager');
 
+// generate HTML for each member of the team and return a full HTML page
 async function generateHTML(team) {
     let teamMembersHTML = "";
     team.forEach(member => {
-        console.log(member);
         let memeberHTML = "";
         if (member instanceof Manager) {
             memeberHTML = managerHTML(member);
@@ -28,6 +29,7 @@ async function generateHTML(team) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Team</title>
+    <!-- INCLUDE BOOTSTRAP CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
@@ -41,10 +43,11 @@ async function generateHTML(team) {
     <main>
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 justify-content-around text-center">
+            <!-- GENERATED CARDS FOR EACH TEAM MEMBER -->
                 ${teamMembersHTML}
         </div>
     </main>
-
+    <!-- INCLUDE BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
@@ -54,6 +57,7 @@ async function generateHTML(team) {
 `;
 }
 
+// generate HTML card for manager
 function managerHTML(member) {
     return `
     <div class="card m-3 p-0 bg-light border border-secondary" style="width: 18rem;">
@@ -69,7 +73,7 @@ function managerHTML(member) {
         </div>
     `
 }
-
+// generate HTML card for engineer
 function engineerHTML(member) {
     return `
     <div class="card m-3 p-0 bg-light border border-secondary" style="width: 18rem;">
@@ -85,7 +89,7 @@ function engineerHTML(member) {
         </div>
     `
 }
-
+// generate HTML card for intern
 function internHTML(member) {
     return `
     <div class="card m-3 p-0 bg-light border border-secondary" style="width: 18rem;">

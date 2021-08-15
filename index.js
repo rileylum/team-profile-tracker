@@ -5,6 +5,7 @@ const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 const generateHTML = require('./src/htmlHelper');
 
+// prompt user for question to create an Manager Object
 const getManagerQuestions = () => {
     return Promise.resolve([
         {
@@ -29,7 +30,7 @@ const getManagerQuestions = () => {
         }
     ])
 }
-
+// Prompt the user if they want to add an Engineer or Intern to the team, or if they are finished
 const getMenuQuestions = () => {
     return Promise.resolve([
         {
@@ -39,7 +40,7 @@ const getMenuQuestions = () => {
         }
     ])
 }
-
+// prompt user for question to create an Engineer Object
 const getEngineerQuestions = () => {
     return Promise.resolve([
         {
@@ -64,7 +65,7 @@ const getEngineerQuestions = () => {
         }
     ])
 }
-
+// prompt user for question to create an Intern Object
 const getInternQuestions = () => {
     return Promise.resolve([
         {
@@ -90,6 +91,7 @@ const getInternQuestions = () => {
     ])
 }
 
+// create a index.html file in the dist folder given a formatted string
 const createHTMLFile = (html) => {
     fs.writeFile('./dist/index.html', html, (e) => {
         if (e) throw e;
@@ -121,10 +123,9 @@ async function init() {
             teamMembers.push(new Intern(intern.name, intern.id, intern.email, intern.school))
         }
     } while (menuAnswer.choice != 'Finish Building Team')
-
-    console.log(teamMembers);
+    // get HTML from helper function
     const html = await generateHTML(teamMembers);
-    console.log(html);
+    // create index HTML file
     createHTMLFile(html);
 }
 
