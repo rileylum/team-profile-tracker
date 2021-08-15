@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const fs = require('fs');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
@@ -89,6 +90,12 @@ const getInternQuestions = () => {
     ])
 }
 
+const createHTMLFile = (html) => {
+    fs.writeFile('./dist/index.html', html, (e) => {
+        if (e) throw e;
+    });
+}
+
 async function init() {
     // empty array to store added teamMemebrs
     let teamMembers = [];
@@ -116,7 +123,10 @@ async function init() {
     } while (menuAnswer.choice != 'Finish Building Team')
 
     console.log(teamMembers);
-    console.log(generateHTML(teamMembers));
+    const html = await generateHTML(teamMembers);
+    console.log(html);
+    createHTMLFile(html);
 }
+
 
 init();
